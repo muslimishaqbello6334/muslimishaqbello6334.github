@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&M Software Coders - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-content">
+            <h1 class="main-heading">M&M Software Coders</h1>
+            <p class="tagline">Learn to Code, Build Your Future</p>
+            
+            <div class="buttons-container">
+                <button class="course-btn html-btn" onclick="redirectToRegistration('HTML')">
+                    <span class="btn-icon">📄</span>
+                    <span class="btn-text">HTML</span>
+                </button>
+                <button class="course-btn css-btn" onclick="redirectToRegistration('CSS')">
+                    <span class="btn-icon">🎨</span>
+                    <span class="btn-text">CSS</span>
+                </button>
+                <button class="course-btn js-btn" onclick="redirectToRegistration('JavaScript')">
+                    <span class="btn-icon">⚡</span>
+                    <span class="btn-text">JavaScript</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToRegistration(course) {
+            localStorage.setItem('selectedCourse', course);
+            window.location.href = 'registration.html';
+        }
+    </script>
+</body>
+</html>
